@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Renova - Turning Community Waste into Clean Energy</title>
+  <meta name="description" content="Renova: modular, IoT-enabled waste-to-energy plants that convert community waste into electricity and by-products like eco-bricks, biochar, and synthetic aggregates." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0f1724;--muted:#6b7280;--accent:#06b6d4;--green:#16a34a}
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial; margin:0;background:linear-gradient(180deg,#f7faf7 0%, #eef9f4 100%);color:#0b1220}
+    a{color:inherit}
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+
+    header{display:flex;align-items:center;justify-content:space-between;padding:20px 0}
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--green),#0ea5a1);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:20px}
+    header h1{margin:0;font-size:20px}
+    header p{margin:0;color:var(--muted);font-size:13px}
+    nav{display:flex;gap:12px;align-items:center}
+    .btn{background:var(--green);color:#fff;padding:10px 14px;border-radius:10px;border:0;cursor:pointer}
+    .ghost{background:transparent;border:1px solid rgba(0,0,0,0.06);padding:8px 12px;border-radius:10px}
+
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:18px 0}
+    .eyebrow{color:var(--green);font-weight:700;margin-bottom:6px}
+    h2.hero-title{font-size:34px;margin:0 0 8px;line-height:1.05}
+    p.lead{color:#334155;margin:0 0 16px}
+
+    .card{background:#fff;padding:18px;border-radius:12px;box-shadow:0 12px 30px rgba(12,38,27,0.06)}
+
+    .hero-media{border-radius:12px;overflow:hidden}
+    .hero-media img{width:100%;display:block}
+
+    .stats{display:flex;gap:10px;margin-top:16px}
+    .stat{background:linear-gradient(180deg,#ffffff,#f3faf3);padding:10px;border-radius:10px;min-width:120px;text-align:center}
+    .stat b{display:block;color:var(--green);font-size:18px}
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+    .feature{background:linear-gradient(180deg,#ffffff,#fcfffb);padding:12px;border-radius:10px}
+
+    /* By-products cool interface */
+    .bygrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+    .bycard{background:linear-gradient(180deg,#ffffff,#f8fffb);border-radius:12px;padding:16px;display:flex;gap:12px;align-items:flex-start;transition:transform .18s, box-shadow .18s}
+    .bycard:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(6,58,46,0.08)}
+    .icon{width:54px;height:54px;border-radius:10px;background:linear-gradient(180deg,#e6fff4,#d1f7e4);display:flex;align-items:center;justify-content:center;font-weight:700;color:#05603a}
+    .bycard h4{margin:0 0 6px}
+    .bycard p{margin:0;color:var(--muted);font-size:14px}
+
+    /* Waste-to-energy split layout */
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center;margin-top:18px}
+    .wte-img{border-radius:12px;overflow:hidden}
+    .wte-img img{width:100%;height:auto;display:block}
+    .caption{font-size:13px;color:var(--muted);margin-top:8px}
+
+    /* responsive */
+    @media (max-width:980px){.hero{grid-template-columns:1fr}.bygrid{grid-template-columns:repeat(2,1fr)}.features{grid-template-columns:1fr}.split{grid-template-columns:1fr}}
+    @media (max-width:640px){.bygrid{grid-template-columns:1fr}.stats{flex-direction:column;gap:8px}}
+
+    footer{margin-top:28px;padding:24px 0;text-align:center;color:#334155}
+
+    /* subtle CTA bar */
+    .cta-bar{background:linear-gradient(90deg,#ecffef,#f3fff7);padding:18px;border-radius:12px;display:flex;justify-content:space-between;align-items:center;margin-top:22px}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">R</div>
+        <div>
+          <h1>Renova</h1>
+          <p>Waste → Energy → By-products</p>
+        </div>
+      </div>
+      <nav>
+        <a class="ghost" href="#solution">Solution</a>
+        <a class="ghost" href="#wte">Waste-to-Energy</a>
+        <a class="ghost" href="#byproducts">By-products</a>
+        <a class="ghost" href="#contact">Contact</a>
+        <button class="btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Request a Demo</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <div class="eyebrow">For Municipalities &amp; Panchayats</div>
+          <h2 class="hero-title">Turn community waste into clean electricity and valuable by-products</h2>
+          <p class="lead">Renova builds modular, IoT-enabled waste-to-energy plants tailored for Indian towns. Reduce landfill use, cut emissions, and create revenue from eco-bricks, biochar, aggregates and more.</p>
+
+          <div class="stats">
+            <div class="stat"><small class="muted">India waste (annual)</small><b>62M t</b></div>
+            <div class="stat"><small class="muted">Pilot scale</small><b>1–5 TPD</b></div>
+            <div class="stat"><small class="muted">By-products</small><b>Eco-bricks</b></div>
+          </div>
+
+          <div class="features">
+            <div class="feature card"><strong>Modular & Scalable</strong><div class="muted">Quick deployment, expand as needed</div></div>
+            <div class="feature card"><strong>IoT Monitoring</strong><div class="muted">Real-time analytics for uptime and efficiency</div></div>
+            <div class="feature card"><strong>Low O&amp;M</strong><div class="muted">Designed for local technicians</div></div>
+          </div>
+
+        </div>
+
+        <aside class="card hero-media">
+          <img src="renova.jpg" alt="Modular waste-to-energy plant" />
+        </aside>
+      </section>
+
+      <section id="solution" style="margin-top:20px">
+        <div class="card">
+          <h3>How Renova Works</h3>
+          <ol style="margin-top:8px;padding-left:18px">
+            <li>Collect &amp; segregate community waste at source.</li>
+            <li>Process in modular anaerobic digestion / gasification units.</li>
+            <li>Recover energy (kWh) for municipal loads and export to grid.</li>
+            <li>Convert residuals into by-products for construction and agriculture.</li>
+          </ol>
+          <p class="muted" style="margin-top:10px">IoT sensors monitor temperature, gas output, and equipment health — enabling predictive maintenance and transparent reporting for municipal stakeholders.</p>
+        </div>
+      </section>
+
+      <!-- Waste-to-Energy split layout with diagram on left and explanation on right -->
+      <section id="wte" style="margin-top:20px">
+        <h3>Waste-to-Energy Process</h3>
+        <div class="split">
+          <div class="wte-img card">
+            <!-- Replace the src value below with the actual image URL or local path after you upload the diagram image -->
+            <img src="wte-diagram.jpg" alt="Waste to energy process diagram showing collection, processing, power generation and by-products" />
+            <div class="caption">How Renova converts municipal waste into electricity and usable by-products.</div>
+          </div>
+          <div>
+            <div class="card">
+              <h4>From waste to energy — step by step</h4>
+              <p class="muted">Our process integrates segregation, preprocessing, biological/thermal conversion, energy recovery, emissions control, and by-product processing. The diagram shows feedstock flow, conversion units (digester, gasifier), power generation, emissions treatment, and by-product recovery systems.</p>
+
+              <h4 style="margin-top:12px">What you’ll gain</h4>
+              <ul>
+                <li>Reliable local electricity for municipal loads.</li>
+                <li>Reusable by-products: eco-bricks, biochar, cement additives, synthetic aggregates, and RDF.</li>
+                <li>Clear monitoring via IoT dashboard for transparency and maintenance.</li>
+              </ul>
+              <p class="muted">Tip: Upload the provided waste-to-energy diagram image to your host (Netlify/GitHub) and replace <code>wte-diagram.jpg</code> with the actual file path or public URL for the image to display.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="byproducts" style="margin-top:20px">
+        <h3>By-Products from Waste-to-Energy</h3>
+        <p class="muted">Beyond electricity, Renova recovers materials that feed local economies and promote circular construction practices.</p>
+
+        <div class="bygrid">
+          <div class="bycard">
+            <div class="icon">EB</div>
+            <div>
+              <h4>Eco-Bricks</h4>
+              <p>Stabilized bottom ash transformed into lightweight, durable bricks for non-structural construction and landscaping.</p>
+            </div>
+          </div>
+
+          <div class="bycard">
+            <div class="icon">BF</div>
+            <div>
+              <h4>Biofertilizer</h4>
+              <p>Nutrient-rich organic fertilizer produced from organic digestate — supports urban agriculture and green spaces.</p>
+            </div>
+          </div>
+
+          <div class="bycard">
+            <div class="icon">BC</div>
+            <div>
+              <h4>Biochar</h4>
+              <p>Carbon-rich material enhancing soil health, water retention, and serving as a carbon sequestration method.</p>
+            </div>
+          </div>
+
+          <div class="bycard">
+            <div class="icon">SA</div>
+            <div>
+              <h4>Synthetic Aggregates</h4>
+              <p>Processed ash and slag repurposed as aggregates for road base, paver blocks, and concrete mixes.</p>
+            </div>
+          </div>
+
+          <div class="bycard">
+            <div class="icon">CA</div>
+            <div>
+              <h4>Construction Ash</h4>
+              <p>Fly ash and processed residues used as cement additives and fillers in pavers and blocks.</p>
+            </div>
+          </div>
+
+          <div class="bycard">
+            <div class="icon">RDF</div>
+            <div>
+              <h4>RDF (Refuse Derived Fuel)</h4>
+              <p>Processed combustible fractions used as alternative fuel in industrial kilns, reducing fossil fuel use.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="cta-bar">
+          <div>
+            <strong>Want a pilot?</strong>
+            <div class="muted">See how your municipality can turn waste into energy and revenue.</div>
+          </div>
+          <div>
+            <button class="btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Request a Pilot</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" style="margin-top:22px;display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap">
+        <div style="flex:1;min-width:300px">
+          <div class="card">
+            <h3>Contact Us</h3>
+            <p class="muted">Rajiv Gandhi University of Knowledge Technologies, Nuzvid</p>
+            <p style="font-weight:700;margin:6px 0">blinkesp75@gmail.com</p>
+            <p class="muted">Phone: +91 8317584165</p>
+            <p style="margin-top:12px">Or send a message describing your municipality’s waste volumes and we’ll propose a pilot plan.</p>
+          </div>
+        </div>
+
+        <div style="width:360px;min-width:280px">
+          <div class="card">
+            <h4>Quick Facts</h4>
+            <p class="muted">TAM (India WtE): ~USD 1.8B • Target: 1–5 TPD pilot units • UVP: modular + IoT • By-products: eco-bricks, biochar, RDF.</p>
+            <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
+              <a class="ghost" href="#">LinkedIn</a>
+              <a class="ghost" href="#">YouTube</a>
+              <a class="ghost" href="#">Instagram</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div>© 2025 Renova — Turning Waste into Value • Built for a Cleaner, Greener India</div>
+    </footer>
+  </div>
+
+  <!-- Note: Replace 'wte-diagram.jpg' with the actual URL or file path of your uploaded diagram image -->
+</body>
+</html>
